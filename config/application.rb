@@ -65,5 +65,8 @@ module InstagramApp
       # For secured endpoints only
       #config.client_ips = '<Comma separated list of IPs>'
     end
+
+    # Ignore database connection during precompile
+    config.assets.initialize_on_precompile = false
   end
 end
