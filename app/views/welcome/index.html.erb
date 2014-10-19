@@ -1,0 +1,39 @@
+<h1>Welcome to our App</h1>
+
+
+<% unless current_user %>
+<div class="center">
+  <%= link_to "Login with Instagram", authenticate_path, class: 'btn btn-primary btn-large' %>
+</div>
+<% else %>
+
+<%=image_tag session[:user_image] %>
+
+<table>
+    <thead>
+        <tr>
+            <td>Name :: </td>
+            <td> <%= current_user.full_name %></td>
+        </tr>
+        <tr>
+            <td>User Name :: </td>
+            <td> <%= current_user.user_name %></td>
+        </tr>
+
+        <tr>
+            <td>Access Token :: </td>
+            <td> <%= current_user.auth_token %></td>
+        </tr>
+
+
+        <tr>
+            <td>Instagram Id :: </td>
+            <td> <%= current_user.instagram_id %></td>
+        </tr>
+
+
+    </thead>
+</table>
+
+
+<% end %>
