@@ -59,13 +59,6 @@ module InstagramApp
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    Instagram.configure do |config|
-      config.client_id = "e3a80b6280fc437798c8b3b79e973e26"
-      config.client_secret = "ac8ff136e1db48e4a22b569d8c273c05"
-      # For secured endpoints only
-      #config.client_ips = '<Comma separated list of IPs>'
-    end
-
     # Ignore database connection during precompile
     config.assets.initialize_on_precompile = false
   end
