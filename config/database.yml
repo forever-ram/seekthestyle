@@ -5,9 +5,9 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  database: instagram_app
+  database: seekdb
   encoding: unicode
-  username: postgres
+  username: seek_user
   password: postgres
   host: localhost
 
