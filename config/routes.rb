@@ -4,7 +4,15 @@ InstagramApp::Application.routes.draw do
   get :authenticate, to: 'welcome#authenticate'
   get :logout, to: 'welcome#logout'
 
-  # The priority is based upon order of creation:
+  scope '/sts' do
+    scope '/v1' do
+      scope '/api' do
+        resources :stories, only: [:index], :controller => "api_stories"
+      end
+    end
+  end
+
+        # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:

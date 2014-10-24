@@ -11,6 +11,7 @@ gem 'pg'
 # in production environments by default.
 
 gem "factory_girl_rails", "~> 4.0"
+gem "active_model_serializers",'0.8.1'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'

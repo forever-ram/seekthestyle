@@ -1,0 +1,12 @@
+
+<script type='text/x-handlerbars' id='stories-list-hbr'>
+  <div class='day-container'>
+ {{date}}<br />
+  {{#each stories}}
+      <div>
+        <a href='{{headline}}'>{{headline}}</a>
+        <div class='show-comments' data-story-id='{{id}}'>comments</div>
+      </div>
+  {{/each}}
+  </div>
+</script>
