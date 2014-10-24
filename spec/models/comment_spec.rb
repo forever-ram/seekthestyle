@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe Comment, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Comment do
+  it { should respond_to(:body) }
+  it { should respond_to(:commentable_id) }
+  it { should respond_to(:commentable_type) }
 end
