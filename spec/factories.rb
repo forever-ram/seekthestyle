@@ -60,17 +60,20 @@ FactoryGirl.define do
       after(:create) {|jon| create(:story4, user: jon) }
     end
 
+=begin
     factory :jon_with_comments do |jon|
       after(:create) {|jon| create(:story0, user: jon) }
       after(:create) {|jon| create(:story2, user: jon) }
       after(:create) {|jon| create(:story4, user: jon) }
 
       #if(Story.count>0)
-      story=Story.first
-      after(:create) {|jon| create(:comment, body: "all things are like this", commentable: story)}
+      #story=Story.first
+      #after(:create) {|jon| create(:comment, body: "all things are like this", commentable: story)}
       #end
     end
+=end
   end
 
-end
+
+  end
 
