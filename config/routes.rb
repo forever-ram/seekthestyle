@@ -12,7 +12,15 @@ InstagramApp::Application.routes.draw do
     end
   end
 
-        # The priority is based upon order of creation:
+  scope '/sts-admin' do
+    get '/'  => 'admin#index'
+    scope '/api' do
+      resources :stories, only: [:index], :controller => "api_admin_stories"
+    end
+  end
+
+
+  # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
