@@ -61,10 +61,12 @@ FactoryGirl.define do
     end
 
     factory :jon_with_comments do |jon|
+=begin
       if(Story.count>0)
         s=Story.first
         after(:create) {|jon| create(:comment, body: "all things are like this", commentable: s)}
       end
+=end
     end
   end
 
